@@ -2,6 +2,23 @@
 # Cookbook Name:: redis
 # Recipe:: _server_config
 
+## This is copied from server_service
+# Need to figure out a good way to make this work, that allows reconfigure -HGH
+redis_service = case node['platform']
+when "ubuntu", "debian"
+  "redis-server"
+when "centos", "redhat"
+  "redis"
+else
+  "redis"
+end
+
+service "redis" do
+  service_name redis_service
+  action :none
+end
+##/copy
+
 directory node['redis']['conf_dir'] do
   owner "root"
   group "root"

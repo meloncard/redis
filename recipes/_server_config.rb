@@ -15,7 +15,7 @@ end
 
 service "redis" do
   service_name redis_service
-  action :none
+  action :nothing
 end
 ##/copy
 

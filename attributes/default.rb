@@ -25,7 +25,7 @@ default['redis']['source']['url'] = "http://redis.googlecode.com/files"
 default['redis']['source']['version'] = "2.4.9"
 default['redis']['src_dir'] = "/usr/src/redis"
 default['redis']['dst_dir'] = "/opt/redis"
-default['redis']['conf_dir'] = "/etc/redis"
+default['redis']['conf_dir'] = "/etc"
 default['redis']['init_style'] = "init"
 
 # service user & group
